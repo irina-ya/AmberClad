@@ -1,0 +1,29 @@
+(open in Sublime text for best reults, lol)
+
+PreLoad Screen: 			pops up while app loads
+Repair Order Main:			main screen for repair order section, has large buttons for other repair order menu items
+Repair Order Lookup:		form to search repair orders
+New Repair Order:			form to add repair order
+Customer Lookup Screen:		when adding repair order taken to this screen to search customer
+Active Repair Order:		displays report of all active repair orders that are being worked on
+All Repair Orders:			displays report of all repair orders EVER listed newest to oldest
+Product Orders:				main screen for product orders, has large buttons for 
+Product Order Lookup:		search product orders
+New Product Order:			add new product order form
+Unfullfilled Orders:		screen displaying list of product orders that employee has not filled(this would maybe only be orders called in?)
+All Product Orders:			displays all of the product orders ever and allows search
+Customer Main:				main screen for customer section, two large icons for customer options
+New Customer:				add customer form
+Customer Directory:			list of all of the customers sorted by last name alphabetically; search form
+Employee Main:				main screen for employee
+Add Employee:				form to add employee to the system
+Employee Directory:			list of all employees sorted alphabetically by last name; search form
+Reporting:					show main icons for reporting
+Custom Report:				idk. Allows employees to set own parameters for some reports
+My Reports:					where all of the other reports we created can live
+Error Screen	
+Customer Details:			View individual Customer Profile; All info from customer table + list view of orders
+Repair Order Details:		Shows all of the details associated with a specific repair order + Customer Name + Customer Contact Info
+Employee Details View:		Shows all of a particular employees info; allows user to edit/update/etc employee; change employee status
+Product Order Details:		Detailed view of a specific product order
+Product View:				shows specific prodcuct info stored in db including suppliers that have given us the product and how to contact them/how to order
