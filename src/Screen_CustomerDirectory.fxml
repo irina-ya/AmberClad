@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="782.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="782.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-                  <TableView fx:id="customer_list" layoutX="256.0" layoutY="138.0" prefHeight="637.0" prefWidth="801.0">
+                  <TableView fx:id="customer_list" layoutX="256.0" layoutY="138.0" prefHeight="637.0" prefWidth="700.0">
                       <columns>
                           <TableColumn fx:id="col_1" prefWidth="79.0" text="Id">
                               <cellValueFactory>
@@ -194,12 +194,7 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <Label alignment="CENTER" layoutX="555.0" layoutY="-1.0" prefHeight="50.0" prefWidth="200.0" text="FILTERS" textAlignment="CENTER" underline="true">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <VBox layoutX="287.0" layoutY="53.0" prefHeight="75.0" prefWidth="200.0">
+      <VBox layoutX="284.0" layoutY="14.0" prefHeight="75.0" prefWidth="200.0">
          <children>
             <Label alignment="CENTER" prefHeight="25.0" prefWidth="200.0" text="Name" textAlignment="CENTER">
                <font>
@@ -213,7 +208,7 @@
             </JFXTextField>
          </children>
       </VBox>
-      <VBox layoutX="544.0" layoutY="51.0" prefHeight="75.0" prefWidth="200.0">
+      <VBox layoutX="518.0" layoutY="13.0" prefHeight="75.0" prefWidth="200.0">
          <children>
             <Label alignment="CENTER" prefHeight="25.0" prefWidth="200.0" text="Phone" textAlignment="CENTER">
                <font>
@@ -227,7 +222,7 @@
             </JFXTextField>
          </children>
       </VBox>
-      <VBox layoutX="794.0" layoutY="51.0" prefHeight="100.0" prefWidth="200.0">
+      <VBox layoutX="745.0" layoutY="13.0" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Label alignment="CENTER" prefHeight="25.0" prefWidth="200.0" text="Email" textAlignment="CENTER">
                <font>
@@ -241,5 +236,16 @@
             </JFXTextField>
          </children>
       </VBox>
+      <VBox prefHeight="95.0" prefWidth="200.0" />
+      <JFXButton fx:id="btn_customers_apply" layoutX="277.0" layoutY="96.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="200.0" text="Apply Filters">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_customers_clear" layoutX="752.0" layoutY="94.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="200.0" text="Clear Filters">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>
