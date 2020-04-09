@@ -66,7 +66,7 @@ public class cont_CustomerDirectory {
         Connection conn = this.connect_db();
         customer_data = FXCollections.observableArrayList();
 
-        String sql_main = "SELECT * FROM Customers ORDER BY Customer_ID";
+        String sql_main = "SELECT customerID, customerFirstName, customerLastName, customerPrimaryPhone, customerEmail FROM Customers ORDER BY Customer_ID";
 
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql_main);
