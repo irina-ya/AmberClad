@@ -1,4 +1,5 @@
 import com.jfoenix.controls.JFXButton;
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.*;
 
 public class Main extends Application {
 
@@ -19,12 +21,16 @@ public class Main extends Application {
     }
 
 
+
+
     @FXML public void custDirectory_click() throws IOException {
         Stage orderStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Screen_CustomerDirectory.fxml"));
         orderStage.setTitle("Customer Directory");
         orderStage.setScene(new Scene(root, 950, 768));
         orderStage.show();}
+
+
 
 
     public static void main(String[] args) {
