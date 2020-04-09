@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.*;
 
@@ -17,6 +18,18 @@ public class cont_CustomerDirectory {
     TableView customer_list;
     @FXML
     JFXTextField filter_name,filter_phone,filter_email;
+
+    @FXML private void initialize() {
+
+        col_1.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_ID"));
+        col_2.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_fName"));
+        col_3.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_lName"));
+        col_4.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_PhoneNumber"));
+        col_5.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_EmailAddress"));
+
+        populateDataTable();
+
+    }
 
     //set up DB connection
     private Connection connect_db() {
