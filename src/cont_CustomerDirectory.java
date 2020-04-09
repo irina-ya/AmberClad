@@ -75,7 +75,7 @@ public class cont_CustomerDirectory {
                 customer_data.add(new TableModel_Customer(result_set.getInt(1),result_set.getString(2),result_set.getString(3),result_set.getString(4),
                         result_set.getString(5)));
             }
-
+            customer_list.setItems(customer_data);
             result_set.close();
             conn.close();
         } catch (SQLException tableQueryException) {
