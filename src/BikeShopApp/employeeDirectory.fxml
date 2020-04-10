@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+    <AnchorPane prefHeight="782.0" prefWidth="768.0">
+        <children>
+            <TableView fx:id="employee_List" layoutX="-1.0" layoutY="146.0" prefHeight="638.0" prefWidth="998.0">
+                <columns>
+                    <TableColumn fx:id="col_1" prefWidth="262.0" text="Name">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Employee_Name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="col_2" prefWidth="110.0" text="Status">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Employee_Status" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="col_3" prefWidth="222.66668701171875" text="Position">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Employee_Position" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="col_4" prefWidth="157.8665771484375" text="Type">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Employee_Type" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="col_5" prefWidth="236.800048828125" text="Phone#1">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Employee_PhoneNumber1" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+         <Button layoutX="321.0" layoutY="74.0" mnemonicParsing="false" text="Active Employees" />
+         <Button layoutX="519.0" layoutY="74.0" mnemonicParsing="false" text="Inactive Employees" />
+        </children>
+    </AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
