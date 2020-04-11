@@ -1,54 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
-    <AnchorPane prefHeight="782.0" prefWidth="768.0">
-        <children>
-            <TableView fx:id="employee_List" layoutX="-1.0" layoutY="146.0" prefHeight="638.0" prefWidth="998.0">
-                <columns>
-                    <TableColumn fx:id="col_1" prefWidth="262.0" text="Name">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="Employee_Name" />
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="col_2" prefWidth="110.0" text="Status">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="Employee_Status" />
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="col_3" prefWidth="222.66668701171875" text="Position">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="Employee_Position" />
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="col_4" prefWidth="157.8665771484375" text="Type">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="Employee_Type" />
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="col_5" prefWidth="236.800048828125" text="Phone#1">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="Employee_PhoneNumber1" />
-                        </cellValueFactory>
-                    </TableColumn>
-                </columns>
-            </TableView>
-         <Button layoutX="321.0" layoutY="74.0" mnemonicParsing="false" text="Active Employees" />
-         <Button layoutX="519.0" layoutY="74.0" mnemonicParsing="false" text="Inactive Employees" />
-        </children>
-    </AnchorPane>
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
-</GridPane>
+<AnchorPane fx:id="custDir" prefHeight="782.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.custDirectoryController">
+    <children>
+      <VBox prefHeight="782.0" prefWidth="838.0">
+         <children>
+            <Label prefHeight="64.0" prefWidth="414.0" text="Employee Directory">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="166.0" text="Employee Lookup: ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="43.0" prefWidth="838.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="79.0" text="First Name: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="filter_eFirstName" prefHeight="18.0" prefWidth="135.0">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Label prefHeight="28.0" prefWidth="78.0" text="Last Name: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="filter_eLastName" prefHeight="18.0" prefWidth="135.0">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Label prefHeight="28.0" prefWidth="49.0" text="Status:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXComboBox fx:id="combo_eStatus" prefHeight="26.0" prefWidth="128.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <Label prefHeight="28.0" prefWidth="37.0" text="Type:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXComboBox fx:id="combo_eType" prefHeight="26.0" prefWidth="128.0">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="838.0">
+               <children>
+                  <HBox prefHeight="66.0" prefWidth="501.0" />
+                  <JFXButton fx:id="searchBtn" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Search">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="clearBtn" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Clear Filters">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+                        <TableView fx:id="customer_list" prefHeight="473.0" prefWidth="818.0">
+                            <columns>
+                                <TableColumn fx:id="col_1" prefWidth="114.39999520778656" text="Employee ID">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Customer_ID" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="col_2" prefWidth="187.20000457763672" text="First Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Customer_FirstName" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                  <TableColumn fx:id="col_3" prefWidth="154.3999481201172" text="Last Name" />
+                                <TableColumn fx:id="col_4" minWidth="0.0" prefWidth="174.39999389648438" text="Status">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Customer_PhoneNumber" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="col_5" maxWidth="285.6000610351563" prefWidth="188.0" text="Type">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Customer_EmailAddress" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+                        </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="688.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <JFXButton fx:id="viewDetailsBtn" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="View Details">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

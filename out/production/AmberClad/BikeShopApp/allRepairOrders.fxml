@@ -1,19 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="All Repair Orders!">
-         <HBox.margin>
-            <Insets left="100.0" top="200.0" />
-         </HBox.margin>
-         <font>
-            <Font name="System Bold" size="43.0" />
-         </font>
-      </Label>
+      <VBox prefHeight="782.0" prefWidth="768.0">
+         <children>
+            <Label text="All Repair Orders">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="768.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="87.0" text="Sort By: ">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox prefHeight="26.0" prefWidth="194.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+            </HBox>
+            <TableView prefHeight="529.0" prefWidth="768.0">
+              <columns>
+                <TableColumn prefWidth="161.3332860469818" text="Repair Order ID" />
+                <TableColumn prefWidth="165.5999298095703" text="Customer Name" />
+                  <TableColumn prefWidth="149.86660766601562" text="Order Status" />
+                  <TableColumn prefWidth="139.7333984375" text="Date Placed" />
+                  <TableColumn prefWidth="154.666748046875" text="Date Completed" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="618.0" />
+                  <JFXButton prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="View Details">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </HBox>
