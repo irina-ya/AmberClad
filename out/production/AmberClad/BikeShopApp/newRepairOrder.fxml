@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+    <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
+        <HBox prefHeight="114.0" prefWidth="996.0">
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="New Repair Order " textOverrun="CENTER_ELLIPSIS" underline="true">
+                <font>
+                    <Font name="System Bold" size="27.0" />
+                </font></Label>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="65.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="155" text="Customer First Name : " />
+            <TextField fx:id="firstNameTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="155" text="Customer Last Name : " />
+            <TextField fx:id="lastNameTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="298.0" right="10.0" top="20.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="298.0" right="10.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="155" text="Order Date : " />
+            <DatePicker fx:id="repairOrderDate" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="185" text="Estimated Completion Date : " />
+            <DatePicker fx:id="estimatedCompletionDate" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+
+    </VBox>
+    <AnchorPane prefHeight="782.0" prefWidth="768.0">
+        <children>
+            <ComboBox layoutX="457.0" layoutY="255.0" prefHeight="25.0" prefWidth="181.0" promptText="Repair Type">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Part Installation" />
+                        <String fx:value="Part Replacement" />
+                        <String fx:value="Tune Up" />
+                        <String fx:value="Adjustment" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button layoutX="457.0" layoutY="603.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Submit" />
+            <ComboBox layoutX="801.0" layoutY="255.0" prefHeight="25.0" prefWidth="190.0" promptText="Repair Order Status">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Not Yet Started" />
+                        <String fx:value="Being Worked On" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+         <TextField layoutX="452.0" layoutY="334.0" prefHeight="210.0" prefWidth="568.0" />
+         <Label layoutX="349.0" layoutY="334.0" prefHeight="17.0" prefWidth="100.0" text="Order Comments :" />
+
+        </children>
+    </AnchorPane>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

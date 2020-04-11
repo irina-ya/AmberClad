@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="Add New Employee " textOverrun="CENTER_ELLIPSIS" underline="true">
+            <font>
+               <Font name="System Bold" size="27.0" />
+            </font></Label>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="65.0" />
+            </padding>
+        </HBox>
+        <HBox prefHeight="25.0" prefWidth="1209.0">
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="First Name : " />
+            <TextField fx:id="firstNameTextField" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Last Name : " />
+            <TextField fx:id="lastNameTextField" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="298.0" right="10.0" top="20.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="298.0" right="10.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #1 : " />
+            <TextField fx:id="phoneNumber1TextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #2 : " />
+            <TextField fx:id="phoneNumber2TextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
+            <TextField fx:id="emailTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #1 : " />
+            <TextField fx:id="address1TextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
+            <TextField fx:id="address2TextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="City : " />
+            <TextField fx:id="CityTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="State : " />
+            <TextField fx:id="stateTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Zip : " />
+            <TextField fx:id="zipTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+            <padding>
+                <Insets bottom="10.0" left="300.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+
+    </VBox>
+    <AnchorPane prefHeight="782.0" prefWidth="768.0">
+        <children>
+         <ComboBox layoutX="401.0" layoutY="391.0" prefHeight="25.0" prefWidth="181.0" promptText="Employee Position">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                 <String fx:value="Manager" />
+                 <String fx:value="Repair Technician" />
+                 </FXCollections>
+             </items>
+         </ComboBox>
+         <Button layoutX="739.0" layoutY="564.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Submit" />
+         <ComboBox layoutX="694.0" layoutY="391.0" prefHeight="25.0" prefWidth="190.0" promptText="Employee Type">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                 <String fx:value="Full-Time" />
+                 <String fx:value="Part-Time" />
+                 <String fx:value="Temporary" />
+                 </FXCollections>
+             </items>
+         </ComboBox>
+         <ComboBox layoutX="981.0" layoutY="391.0" prefHeight="25.0" prefWidth="190.0" promptText="Employee Status">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Active" />
+                     <String fx:value="Inactive" />
+                 </FXCollections>
+             </items>
+         </ComboBox>
+        </children>
+    </AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

@@ -1,64 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
     <AnchorPane prefHeight="782.0" prefWidth="768.0">
         <children>
-            <HBox layoutX="-2.0" prefHeight="114.0" prefWidth="806.0">
-                <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="314.0" text="Active Employees " textOverrun="CENTER_ELLIPSIS" underline="true">
-                    <font>
-                        <Font name="System Bold" size="27.0" />
-                    </font></Label>
-                <padding>
-                    <Insets bottom="10.0" left="300.0" right="10.0" top="65.0" />
-                </padding>
-            </HBox>
-            <TableView fx:id="employee_List" layoutX="-34.0" layoutY="224.0" prefHeight="555.0" prefWidth="836.0">
+            <TableView fx:id="employee_List" layoutX="-1.0" layoutY="146.0" prefHeight="638.0" prefWidth="998.0">
                 <columns>
-                    <TableColumn fx:id="col_1" prefWidth="243.99994659423828" text="Name">
+                    <TableColumn fx:id="col_1" prefWidth="262.0" text="Name">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Name" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_2" prefWidth="128.800048828125" text="Status">
+                    <TableColumn fx:id="col_2" prefWidth="110.0" text="Status">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Status" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_5" prefWidth="154.0" text="Position">
+                    <TableColumn fx:id="col_3" prefWidth="222.66668701171875" text="Position">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Position" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_6" prefWidth="154.0" text="Type">
+                    <TableColumn fx:id="col_4" prefWidth="157.8665771484375" text="Type">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Type" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_3" prefWidth="154.0" text="Main Phone">
+                    <TableColumn fx:id="col_5" prefWidth="236.800048828125" text="Phone#1">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_PhoneNumber1" />
                         </cellValueFactory>
                     </TableColumn>
                 </columns>
             </TableView>
+         <Button layoutX="321.0" layoutY="74.0" mnemonicParsing="false" text="Active Employees" />
+         <Button layoutX="519.0" layoutY="74.0" mnemonicParsing="false" text="Inactive Employees" />
         </children>
     </AnchorPane>
-    <columnConstraints>
-        <ColumnConstraints />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints />
-    </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
