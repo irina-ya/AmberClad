@@ -1,5 +1,6 @@
 package BikeShopApp;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +19,9 @@ public class custDirectoryController {
     @FXML
     TableView customer_list;
     @FXML
-    JFXTextField filter_name,filter_phone,filter_email;
+    JFXTextField filter_fname,filter_lname, filter_phone,filter_email;
+    @FXML
+    JFXButton clearBtn, searchBtn,viewDetailsBtn;
 
     @FXML private void initialize() {
 
