@@ -27,10 +27,10 @@ public class TableModel_Customer {
     public void setCustomer_ID(int ID){Customer_ID.set(ID);}
 
     public String getCustomer_fName(){return Customer_fName.get();}
-    public void setCustomer_fName(String name){Customer_fName.set(name);}
+    public void setCustomer_fName(String fname){Customer_fName.set(fname);}
 
     public String getCustomer_lName(){return Customer_lName.get();}
-    public void setCustomer_lName(String name){Customer_lName.set(name);}
+    public void setCustomer_lName(String lname){Customer_lName.set(lname);}
 
     public String getCustomer_PhoneNumber() {return Customer_PhoneNumber.get();}
     public void setCustomer_PhoneNumber(String phone){Customer_PhoneNumber.set(phone);}
