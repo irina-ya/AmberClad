@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="782.0" prefWidth="768.0">
+        <children>
+            <JFXButton layoutX="334.0" layoutY="557.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #000000;" text="Submit" />
+        </children>
+    </AnchorPane>
+    <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="432.0" text="New Bike Part Order " textOverrun="CENTER_ELLIPSIS">
+                <font>
+                    <Font name="System Bold" size="43.0" />
+                </font></Label>
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="10.0" top="50.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="166.0" text="Bike Manufacturer Name : " />
+            <JFXTextField fx:id="bikeManufacturerTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
+            <padding>
+                <Insets bottom="10.0" left="40.0" right="10.0" top="35.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="166.0" text="Bike Part Name : " />
+            <JFXTextField fx:id="bikePartNameTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="290" />
+            <padding>
+                <Insets bottom="10.0" left="40.0" right="10.0" top="35.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="166.0" text="Order Amount : " />
+            <JFXTextField fx:id="orderAmountTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="100" />
+            <padding>
+                <Insets bottom="10.0" left="40.0" right="10.0" top="35.0" />
+            </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="167.0" text="Order Date : " />
+            <JFXDatePicker fx:id="OrderDate" defaultColor="BLACK" nodeOrientation="LEFT_TO_RIGHT" prefWidth="290" />
+            <padding>
+                <Insets bottom="10.0" left="40.0" right="10.0" top="35.0" />
+            </padding>
+        </HBox>
+
+
+    </VBox>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,51 +8,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="782.0" prefWidth="768.0">
         <children>
-            <HBox layoutX="-2.0" prefHeight="114.0" prefWidth="806.0">
-                <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="314.0" text="Active Employees " textOverrun="CENTER_ELLIPSIS" underline="true">
-                    <font>
-                        <Font name="System Bold" size="27.0" />
-                    </font></Label>
-                <padding>
-                    <Insets bottom="10.0" left="300.0" right="10.0" top="65.0" />
-                </padding>
-            </HBox>
-            <TableView fx:id="employee_List" layoutX="-34.0" layoutY="224.0" prefHeight="555.0" prefWidth="836.0">
+             <Label prefHeight="64.0" prefWidth="371.0" text="Active Employees " textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                 <font>
+                     <Font name="System Bold" size="43.0" />
+                 </font>
+         </Label>
+            <TableView fx:id="employee_List" layoutX="7.0" layoutY="122.0" prefHeight="538.0" prefWidth="802.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="13.0">
                 <columns>
-                    <TableColumn fx:id="col_1" prefWidth="243.99994659423828" text="Name">
+                    <TableColumn fx:id="col_1" prefWidth="176.00002443790436" text="Name">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Name" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_2" prefWidth="128.800048828125" text="Status">
+                    <TableColumn fx:id="col_2" prefWidth="137.5999755859375" text="Status">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Status" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_5" prefWidth="154.0" text="Position">
+                    <TableColumn fx:id="col_5" prefWidth="161.60003662109375" text="Position">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Position" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_6" prefWidth="154.0" text="Type">
+                    <TableColumn fx:id="col_6" prefWidth="97.60003662109375" text="Type">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_Type" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="col_3" prefWidth="154.0" text="Main Phone">
+                    <TableColumn fx:id="col_3" prefWidth="171.99993896484375" text="Main Phone">
                         <cellValueFactory>
                             <PropertyValueFactory property="Employee_PhoneNumber1" />
                         </cellValueFactory>
                     </TableColumn>
                 </columns>
             </TableView>
+         <JFXButton layoutX="604.6" layoutY="667.0" prefHeight="49.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="View Employee" AnchorPane.rightAnchor="13.0" />
         </children>
     </AnchorPane>
     <columnConstraints>
