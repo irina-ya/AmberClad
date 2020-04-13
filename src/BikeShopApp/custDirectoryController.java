@@ -2,6 +2,7 @@ package BikeShopApp;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -31,33 +32,25 @@ public class custDirectoryController {
         col_4.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_PhoneNumber"));
         col_5.setCellValueFactory(new PropertyValueFactory<TableModel_Customer,String>("Customer_EmailAddress"));
 
-       /* populateDataTable();*/
+       populateDataTable();
 
     }
 
-/*
+
     //set up DB connection
     private Connection connect_db() {
-       */
-/* SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setUser("<user>");
-        ds.setPassword("<password>");
-        ds.setServerName("<server>");
-        ds.setPortNumber(1400);
-        ds.setDatabaseName("AdventureWorks");
 
-        CODE ABOVE IS FOR REMOTE CONNECTION *//*
-
-
-
-       //CODE FOR LOCAL SERVER CONNECTION
-        String url = "jdbc:sqlserver://localhost:1433;" + "databaseName=AdventureWorks;user=MyUserName;password=*****";
+SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("gui");
+        ds.setPassword("GUIAmberClad2020!");
+        ds.setServerName("COT-CIS3365-14.cougarnet.uh.edu");
+        ds.setPortNumber(1433);
+        ds.setDatabaseName("HBC_FINAL");
 
         Connection con = null;
 
         try{
-            con = DriverManager.getConnection(url);
-            //con = ds.getConnection();
+            con = ds.getConnection();
             con.setAutoCommit(false);
             System.out.println("Opened database successfully");
         }
@@ -73,7 +66,7 @@ public class custDirectoryController {
         Connection conn = this.connect_db();
         customer_data = FXCollections.observableArrayList();
 
-        String sql_main = "SELECT customerID, customerFirstName, customerLastName, customerPrimaryPhone, customerEmail FROM Customers ORDER BY Customer_ID";
+        String sql_main = "SELECT customerID, customerFirstName, customerLastName, customerPrimaryPhone, customerEmail FROM Customer ORDER BY CustomerID";
 
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql_main);
@@ -90,7 +83,7 @@ public class custDirectoryController {
         }
     }
 
-*/
+
 
 
 
