@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="782.0" prefWidth="537.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="782.0" prefWidth="773.0">
+        <children>
+            <HBox layoutX="-2.0" prefHeight="147.0" prefWidth="806.0">
+                <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="314.0" text="Repair Order Details" textOverrun="CENTER_ELLIPSIS" underline="true">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font></Label>
+                <padding>
+                    <Insets bottom="10.0" left="0.0" right="10.0" top="120.0" />
+                </padding>
+            </HBox>
+            <HBox />
+            <HBox />
+             <JFXButton layoutX="313.0" layoutY="616.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" style="-fx-border-color: #000000;" text="Delete" />
+             <JFXButton layoutX="67.0" layoutY="616.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" style="-fx-border-color: #000000;" text="Edit" />
+            <JFXButton layoutX="191.0" layoutY="616.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" style="-fx-border-color: #000000;" text="Save" />
+         <Label layoutX="53.0" layoutY="267.0" text="Order ID :">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="426.0" layoutY="267.0" text="Order Date : ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="53.0" layoutY="344.0" text="Order Status : ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="53.0" layoutY="199.0" text="Customer Name :">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="53.0" layoutY="422.0" text="Services :">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+        </children>
+    </AnchorPane>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
