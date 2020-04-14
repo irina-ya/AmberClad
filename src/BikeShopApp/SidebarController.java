@@ -102,6 +102,7 @@ public class SidebarController implements Initializable {
     @FXML
     private void newCustomer(MouseEvent event){
         System.out.println("I load new Customer Screen!");
+
         loadPage("newCustomer");
     }
 

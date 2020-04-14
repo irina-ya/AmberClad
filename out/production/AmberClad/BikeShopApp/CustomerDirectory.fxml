@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
@@ -12,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="custDir" prefHeight="782.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.custDirectoryController">
+<AnchorPane fx:id="custDir" prefHeight="782.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.custDirectoryController">
     <children>
       <VBox prefHeight="782.0" prefWidth="838.0">
          <children>
@@ -91,19 +98,19 @@
             <HBox prefHeight="46.0" prefWidth="838.0">
                <children>
                   <HBox prefHeight="66.0" prefWidth="501.0" />
-                  <JFXButton fx:id="searchBtn" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Search">
+                  <JFXButton fx:id="searchBtn" onAction="#setfilers" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Search">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="clearBtn" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Clear Filters">
+                  <JFXButton fx:id="clearBtn" onAction="#clearFilters" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Clear Filters">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </JFXButton>
                </children>
             </HBox>
-                        <TableView fx:id="customer_list" prefHeight="473.0" prefWidth="818.0">
+                        <TableView fx:id="customer_list" prefHeight="473.0" prefWidth="1031.0">
                             <columns>
                                 <TableColumn fx:id="col_1" prefWidth="114.39999520778656" text="Id">
                                     <cellValueFactory>
@@ -133,12 +140,17 @@
                         </TableView>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="688.0">
+                  <HBox prefHeight="90.0" prefWidth="531.0">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
                   </HBox>
-                  <JFXButton fx:id="viewDetailsBtn" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="View Details">
+                  <JFXButton fx:id="viewedit_btn" onAction="#vieweditclick" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="Edit/View">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="del_btn" onAction="#customersdelete" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black;" text="Delete">
                      <HBox.margin>
                         <Insets right="10.0" top="10.0" />
                      </HBox.margin>

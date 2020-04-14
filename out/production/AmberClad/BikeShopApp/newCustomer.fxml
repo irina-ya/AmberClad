@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -15,94 +22,133 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="782.0" prefWidth="768.0">
-        <children>
-            <JFXButton layoutX="167.0" layoutY="513.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #000000;" text="Submit" />
-            <JFXComboBox layoutX="167.0" layoutY="426.0" prefHeight="25.0" prefWidth="190.0" promptText="Customer Status">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Active" />
-                        <String fx:value="Inactive" />
-                    </FXCollections>
-                </items>
-            </JFXComboBox>
-        </children>
-    </AnchorPane>
-    <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
-        <HBox>
-            <Label prefHeight="64.0" prefWidth="413.0" text="New Customer " textOverrun="CENTER_ELLIPSIS">
-                <font>
-                    <Font name="System Bold" size="43.0" />
-                </font></Label>
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="65.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="First Name : " />
-            <JFXTextField fx:id="firstNameTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Last Name : " />
-            <JFXTextField fx:id="lastNameTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
-            </padding>
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #1 : " />
-            <JFXTextField fx:id="phoneNumber1TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #2 : " />
-            <JFXTextField fx:id="phoneNumber2TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
-            <JFXTextField fx:id="emailTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #1 : " />
-            <JFXTextField fx:id="address1TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
-            <JFXTextField fx:id="address2TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
-            <padding>
-                <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="91.0" text="City : " />
-            <JFXTextField fx:id="CityTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="207.0" />
-            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="State : " />
-            <JFXTextField fx:id="stateTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="230.0" />
-            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="57.0" text="Zip : " />
-            <JFXTextField fx:id="zipTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="82.0" />
-            <padding>
-                <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
-            </padding>
-            <padding>
-                <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
-            </padding>
-            <padding>
-                <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
-            </padding>
-        </HBox>
-
-    </VBox>
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.cntrl_newCustomer">
+   <children>
+       <AnchorPane prefHeight="782.0" prefWidth="768.0" />
+       <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
+          <children>
+              <HBox>
+                 <children>
+                     <Label prefHeight="64.0" prefWidth="581.0" text="New Customer " textOverrun="CENTER_ELLIPSIS">
+                         <font>
+                             <Font name="System Bold" size="43.0" />
+                         </font>
+                  </Label>
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="65.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="First Name : " />
+                     <JFXTextField fx:id="firstNameTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Last Name : " />
+                     <JFXTextField fx:id="lastNameTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
+                  </padding>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #1 : " />
+                     <JFXTextField fx:id="phoneNumber1TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Phone #2 : " />
+                     <JFXTextField fx:id="phoneNumber2TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
+                     <JFXTextField fx:id="emailTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #1 : " />
+                     <JFXTextField fx:id="address1TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
+                     <JFXTextField fx:id="address2TextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="480" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="91.0" text="City : " />
+                     <JFXTextField fx:id="cityTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="207.0" />
+                     <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="State : " />
+                  <JFXComboBox fx:id="stateBox" prefHeight="31.0" prefWidth="183.0" />
+                     <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="57.0" text="Zip : " />
+                     <JFXTextField fx:id="zipTextField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="101.0" />
+                 </children>
+                  <padding>
+                      <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+                  </padding>
+                  <padding>
+                      <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+                  </padding>
+                  <padding>
+                      <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+                  </padding>
+              </HBox>
+            <HBox layoutX="10.0" layoutY="404.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="Status : " />
+                  <JFXComboBox fx:id="statusBox" prefHeight="25.0" prefWidth="190.0" promptText="Customer Status">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Active" />
+                           <String fx:value="Inactive" />
+                        </FXCollections>
+                     </items>
+                  </JFXComboBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="455.0">
+               <padding>
+                  <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                     <JFXButton fx:id="btn_submit" mnemonicParsing="false" onAction="#setBtn_submits" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #000000;" text="Submit" />
+                  <JFXButton fx:id="btn_close" mnemonicParsing="false" onAction="#setBtn_close" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #000000;" text="Close">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+          </children>
+   
+                   </VBox>
+   </children>
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />

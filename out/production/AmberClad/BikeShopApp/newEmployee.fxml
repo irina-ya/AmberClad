@@ -64,6 +64,10 @@
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
             </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
+            <JFXTextField fx:id="emailTextField" alignment="CENTER_RIGHT" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
             </padding>
@@ -76,6 +80,10 @@
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
+        </HBox>
+        <HBox>
+            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
+            <JFXTextField fx:id="address2TextField" alignment="CENTER_RIGHT" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
