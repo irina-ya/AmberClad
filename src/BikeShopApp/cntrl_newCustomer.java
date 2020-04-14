@@ -100,11 +100,11 @@ public class cntrl_newCustomer implements Initializable {
         city = cityTextField.getText();
         zip = zipTextField.getText();
         state = stateBox.getSelectionModel().getSelectedIndex() + 1;
-        status = statusBox.getSelectionModel().getSelectedIndex() + 1;
+        status = statusBox.getSelectionModel().getSelectedIndex();
         try{
             ps_conn = conn.createStatement();
-            String sql = "INSERT INTO Customers(customerFirstName, customerLastName, customerEmail, customerPrimaryPhone, customerSecondaryPhone, customerAddress1, customerAddress2, customerCity, customerZip, StateID, customerStatusID) " +
-                    "VALUES('"+fname+"',"+lname+",'"+ email +"',"+phone1+",'"+phone2+"',"+addy1+",'"+addy2+"',"+city+",'"+zip+"',"+state+",'"+status +"')";
+            String sql = "INSERT INTO Customer(customerFirstName, customerLastName, customerEmail, customerPrimaryPhone, customerSecondaryPhone, customerAddress1, customerAddress2, customerCity, customerZip, StateID, customerStatusID) " +
+                    "VALUES('"+fname+"','"+lname+"','"+email+"','"+phone1+"','"+phone2+"','"+addy1+"','"+addy2+"','"+city+"','"+zip+"','"+state+"','"+status+"')";
             ps_conn.executeUpdate(sql);
             ps_conn.close();
             conn.commit();

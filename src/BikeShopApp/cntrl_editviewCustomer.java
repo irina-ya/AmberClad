@@ -141,7 +141,7 @@ public class cntrl_editviewCustomer {
         city = cityTextField.getText();
         zip = zipTextField.getText();
         state = stateBox.getSelectionModel().getSelectedIndex() + 1;
-        status = statusBox.getSelectionModel().getSelectedIndex() + 1;
+        status = statusBox.getSelectionModel().getSelectedIndex();
         try{
             ps_conn = conn.createStatement();
             String sql = "update Customer set customerFirstName ='" + fname + "',customerLastName ='" + lname + "',customerEmail ='" + email + "',customerPrimaryPhone='" + phone1
