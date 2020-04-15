@@ -131,11 +131,11 @@
             <TableView fx:id="repairOrder_list" prefHeight="508.0" prefWidth="759.0">
               <columns>
                 <TableColumn fx:id="id" prefWidth="75.0" text="Order ID" />
-                <TableColumn fx:id="type" prefWidth="120.0" text="Repair Type" />
-                  <TableColumn fx:id="first" prefWidth="138.4000244140625" text="Customer First Name" />
-                  <TableColumn fx:id="last" minWidth="0.0" prefWidth="129.5999755859375" text="Customer Last Name" />
-                  <TableColumn fx:id="bike" minWidth="0.0" prefWidth="154.39996337890625" text="Bike" />
-                  <TableColumn fx:id="status" prefWidth="140.800048828125" text="Order Status" />
+                <TableColumn fx:id="type" prefWidth="111.20001220703125" text="Repair Type" />
+                  <TableColumn fx:id="first" prefWidth="125.5999755859375" text="Customer First Name" />
+                  <TableColumn fx:id="last" minWidth="0.0" prefWidth="125.5999755859375" text="Customer Last Name" />
+                  <TableColumn fx:id="bike" minWidth="0.0" prefWidth="216.800048828125" text="Bike" />
+                  <TableColumn fx:id="status" prefWidth="106.4000244140625" text="Order Status" />
               </columns>
                <VBox.margin>
                   <Insets left="5.0" right="5.0" top="10.0" />
