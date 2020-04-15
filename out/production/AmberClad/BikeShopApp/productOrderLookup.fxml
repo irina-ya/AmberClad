@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="product oder lookup screen!">
-         <HBox.margin>
-            <Insets left="100.0" top="200.0" />
-         </HBox.margin>
-         <font>
-            <Font name="System Bold" size="43.0" />
-         </font>
-      </Label>
+      <VBox prefHeight="782.0" prefWidth="772.0">
+         <children>
+            <Label text="Product Order Lookup">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <TableView prefHeight="507.0" prefWidth="768.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <JFXButton prefHeight="49.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" />
+         </children>
+      </VBox>
    </children>
 </HBox>
