@@ -11,7 +11,7 @@ public class TableModel_RepairOrder {
     public StringProperty Customer_fNameProperty() {return Customer_fName;}
     public StringProperty Customer_lNameProperty() {return Customer_lName;}
     public StringProperty Customer_BikeProperty() {return Customer_Bike;}
-    public StringProperty RepiarOrder_StatusProperty(){return RepairOrder_Status;}
+    public StringProperty RepairOrder_StatusProperty(){return RepairOrder_Status;}
 
     private final IntegerProperty RepairOrder_ID = new SimpleIntegerProperty();
     private final StringProperty Repair_Type = new SimpleStringProperty();
@@ -31,6 +31,9 @@ public class TableModel_RepairOrder {
 
     public int getRepairOrder_ID(){return RepairOrder_ID.get();}
     public void setRepairOrder_ID(int ID){RepairOrder_ID.set(ID);}
+
+    public String getRepair_Type(){return Repair_Type.get();}
+    public void setRepairType(String type){Repair_Type.set(type);}
 
     public String getCustomer_fName(){return Customer_fName.get();}
     public void setCustomer_fName(String fname){Customer_fName.set(fname);}
