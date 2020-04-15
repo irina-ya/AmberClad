@@ -15,43 +15,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="782.0" prefWidth="777.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="782.0" prefWidth="728.0">
-        <children>
-            <JFXComboBox layoutX="173.0" layoutY="438.0" prefHeight="25.0" prefWidth="149.0" promptText="Employee Position">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Manager" />
-                        <String fx:value="Repair Technician" />
-                    </FXCollections>
-                </items>
-            </JFXComboBox>
-            <JFXButton layoutX="173.0" layoutY="556.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Submit" />
-            <JFXComboBox layoutX="395.0" layoutY="438.0" prefHeight="25.0" prefWidth="130.0" promptText="Employee Type">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Full-Time" />
-                        <String fx:value="Part-Time" />
-                        <String fx:value="Temporary" />
-                    </FXCollections>
-                </items>
-            </JFXComboBox>
-            <JFXComboBox layoutX="583.0" layoutY="438.0" prefHeight="25.0" prefWidth="130.0" promptText="Employee Status">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Active" />
-                        <String fx:value="Inactive" />
-                    </FXCollections>
-                </items>
-            </JFXComboBox>
-        </children>
-    </AnchorPane>
+<GridPane alignment="center" hgap="10" prefHeight="782.0" prefWidth="777.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.cntrl_newEmployee">
+    <AnchorPane prefHeight="782.0" prefWidth="728.0" />
     <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
         <HBox>
-            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="Add New Employee " textOverrun="CENTER_ELLIPSIS">
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="New Employee " textOverrun="CENTER_ELLIPSIS">
                 <font>
                     <Font name="System Bold" size="27.0" />
-                </font></Label>
+                </font>
+         </Label>
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="65.0" />
             </padding>
@@ -60,62 +32,54 @@
             <Label alignment="CENTER_RIGHT" prefWidth="100" text="First Name : " />
             <JFXTextField fx:id="firstNameTextField" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
             <Label alignment="CENTER_RIGHT" prefWidth="100" text="Last Name : " />
-            <JFXTextField fx:id="lastNameTextField" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
+            <JFXTextField fx:id="lastNameTextField" nodeOrientation="LEFT_TO_RIGHT" prefWidth="190" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
             </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
-            <JFXTextField fx:id="emailTextField" alignment="CENTER_RIGHT" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="20.0" />
             </padding>
         </HBox>
         <HBox>
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="100.0" text="Phone #1 : " />
-            <JFXTextField fx:id="phoneNumber1TextField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="190.0" />
+            <JFXTextField fx:id="phoneNumber1TextField" prefHeight="25.0" prefWidth="190.0" />
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="100.0" text="Phone #2 : " />
             <JFXTextField fx:id="phoneNumber2TextField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="190.0" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
-        </HBox>
-        <HBox>
-            <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
-            <JFXTextField fx:id="address2TextField" alignment="CENTER_RIGHT" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
         </HBox>
         <HBox>
             <Label alignment="CENTER_RIGHT" prefWidth="100" text="Email : " />
-            <JFXTextField fx:id="emailTextField" alignment="CENTER_RIGHT" prefWidth="480" />
+            <JFXTextField fx:id="emailTextField" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
         </HBox>
         <HBox>
             <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #1 : " />
-            <JFXTextField fx:id="address1TextField" alignment="CENTER_RIGHT" prefWidth="480" />
+            <JFXTextField fx:id="address1TextField" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
         </HBox>
         <HBox>
             <Label alignment="CENTER_RIGHT" prefWidth="100" text="Address #2 : " />
-            <JFXTextField fx:id="address2TextField" alignment="CENTER_RIGHT" prefWidth="480" />
+            <JFXTextField fx:id="address2TextField" prefWidth="480" />
             <padding>
                 <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
             </padding>
         </HBox>
         <HBox>
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="81.0" text="City : " />
-            <JFXTextField fx:id="CityTextField" alignment="CENTER_RIGHT" prefWidth="190" />
+            <JFXTextField fx:id="CityTextField" prefHeight="31.0" prefWidth="139.0" />
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="59.0" text="State : " />
-            <JFXTextField fx:id="stateTextField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="149.0" />
+         <JFXComboBox fx:id="stateBox" prefHeight="31.0" prefWidth="162.0" />
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="54.0" text="Zip : " />
-            <JFXTextField fx:id="zipTextField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="73.0" />
+            <JFXTextField fx:id="zipTextField" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="89.0" />
             <padding>
                 <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
             </padding>
@@ -126,8 +90,62 @@
                 <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
             </padding>
         </HBox>
+      <HBox layoutX="10.0" layoutY="389.0">
+         <padding>
+            <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+               <JFXComboBox fx:id="EmpTypeBox" prefHeight="31.0" prefWidth="153.0" promptText="Employee Type">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Full-Time" />
+                           <String fx:value="Part-Time" />
+                           <String fx:value="Temporary" />
+                       </FXCollections>
+                   </items>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               </JFXComboBox>
+               <JFXComboBox fx:id="EmpPositionBox" prefHeight="31.0" prefWidth="168.0" promptText="Employee Position">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Manager" />
+                           <String fx:value="Repair Technician" />
+                       </FXCollections>
+                   </items>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               </JFXComboBox>
+               <JFXComboBox fx:id="EmpStatusBox" prefHeight="31.0" prefWidth="150.0" promptText="Employee Status">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Active" />
+                           <String fx:value="Inactive" />
+                       </FXCollections>
+                   </items>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               </JFXComboBox>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="440.0">
+         <padding>
+            <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+               <JFXButton fx:id="submit_btn" mnemonicParsing="false" onAction="#add_new_employee" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Submit" />
+            <JFXButton fx:id="btn_close" layoutX="100.0" layoutY="20.0" mnemonicParsing="false" onAction="#setBtn_close" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Close">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
 
-    </VBox>
+          </VBox>
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />

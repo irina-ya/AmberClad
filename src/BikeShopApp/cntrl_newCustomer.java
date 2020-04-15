@@ -17,10 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-import static BikeShopApp.custDirectoryController.customer_selected_id;
-
 public class cntrl_newCustomer implements Initializable {
-
 
     @FXML
     JFXTextField firstNameTextField,lastNameTextField, cityTextField, phoneNumber1TextField, phoneNumber2TextField, emailTextField, address1TextField, address2TextField, CityTextField, zipTextField;
@@ -31,7 +28,10 @@ public class cntrl_newCustomer implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         populateComboBoxes();
+        stateBox.setValue("Texas");
+        cityTextField.setText("Houston");
     }
 
     private Connection connect_db() {
@@ -112,8 +112,6 @@ public class cntrl_newCustomer implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        Stage stage = (Stage) btn_close.getScene().getWindow();
-        stage.hide();
 }
     @FXML public void setBtn_close(){
         Stage stage = (Stage) btn_close.getScene().getWindow();
