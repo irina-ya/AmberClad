@@ -90,7 +90,7 @@ public class SidebarController implements Initializable {
     @FXML
     private void allProductOrders(MouseEvent event){
         System.out.println("I load All Product Order Screen!");
-        loadPage("allProductOrders");
+        loadPage("ProductDirectory");
     }
 
     @FXML
