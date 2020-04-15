@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 public class cntrl_ProductDirectory  implements Initializable {
 
-    @FXML public TableColumn col_1,col_2,col_3,col_4, col_5;
+    @FXML public TableColumn col_1, col_11, col_2,col_3,col_4, col_5;
     @FXML TableView product_table;
     private ObservableList<TableModel_Product> product_data;
     @FXML JFXTextField filter_name;
@@ -29,7 +29,8 @@ public class cntrl_ProductDirectory  implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        col_1.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_Name"));
+        col_1.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_ID"));
+        col_11.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_Name"));
         col_2.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_Cat"));
         col_3.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_Manufac"));
         col_4.setCellValueFactory(new PropertyValueFactory<TableModel_Product,String>("Product_Cost"));
@@ -42,17 +43,16 @@ public class cntrl_ProductDirectory  implements Initializable {
         Connection conn = this.connect_db();
         product_data = FXCollections.observableArrayList();
 
-        String sql_main = "SELECT productDesc, Product_Manufacturer.productManufacturerName, Product_Category.productCategoryName,"
+        String sql_main = "SELECT productID, productDesc, Product_Manufacturer.productManufacturerName, Product_Category.productCategoryName,"
                 + "productCost, Product_Status.productStatus from Product"
                 + " join Product_Category on Product_Category.productCategoryID = Product.productCategoryID"
                 + " join Product_Manufacturer on Product_Manufacturer.productManufacturerID = Product.productManufacturerID"
-                + " join Product_Status on Product_Status.productStatusID = Product.productStatusID";
+                + " join Product_Status on Product_Status.productStatusID = Product.productStatusID order by productID";
         try {
             PreparedStatement ps = conn.prepareStatement(sql_main);
             ResultSet result_set = ps.executeQuery();
             while (result_set.next()){
-                product_data.add(new TableModel_Product(result_set.getString(1), result_set.getString(2), result_set.getString(3),
-                        result_set.getDouble(4), result_set.getString(5)));
+                product_data.add(new TableModel_Product(result_set.getInt(1), result_set.getString(2), result_set.getString(3),result_set.getString(4),result_set.getDouble(5),result_set.getString(6)));
             }
             product_table.setItems(product_data);
             result_set.close();
@@ -66,11 +66,12 @@ public class cntrl_ProductDirectory  implements Initializable {
     private void fetch_RowID(){
         int selected_index;
         selected_index = product_table.getSelectionModel().getSelectedIndex();
-        TableModel_Customer selected_record = (TableModel_Customer)product_table.getItems().get(selected_index);
-        product_selected_id = selected_record.getCustomer_ID();
+        TableModel_Product selected_record = (TableModel_Product)product_table.getItems().get(selected_index);
+        product_selected_id = selected_record.getProduct_ID();
     }
 
     @FXML private void Products_delete (){
+
         if (product_table.getSelectionModel().getSelectedItem() == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Cannot delete item!");
@@ -79,6 +80,7 @@ public class cntrl_ProductDirectory  implements Initializable {
             alert.showAndWait();
         } else {
             fetch_RowID();
+            System.out.println(product_selected_id);
             Connection conn = this.connect_db();
             try {
                 String sql = "DELETE FROM Product WHERE productID = " + product_selected_id;
@@ -125,7 +127,7 @@ public class cntrl_ProductDirectory  implements Initializable {
         product_data = FXCollections.observableArrayList();
 
         name = " productDesc LIKE '%" + filter_name.getText() + "%'";
-        String sql_main = "SELECT productDesc, Product_Manufacturer.productManufacturerName, Product_Category.productCategoryName,"
+        String sql_main = "SELECT productID, productDesc, Product_Manufacturer.productManufacturerName, Product_Category.productCategoryName,"
                 + "productCost, Product_Status.productStatus from Product"
                 + " join Product_Category on Product_Category.productCategoryID = Product.productCategoryID"
                 + " join Product_Manufacturer on Product_Manufacturer.productManufacturerID = Product.productManufacturerID"
@@ -137,8 +139,8 @@ public class cntrl_ProductDirectory  implements Initializable {
             PreparedStatement ps = conn.prepareStatement(sql_main);
             ResultSet result_set = ps.executeQuery();
             while (result_set.next()){
-                product_data.add(new TableModel_Product(result_set.getString(1), result_set.getString(2), result_set.getString(3),
-                        result_set.getDouble(4), result_set.getString(5)));
+                product_data.add(new TableModel_Product(result_set.getInt(1), result_set.getString(2), result_set.getString(3),result_set.getString(4),result_set.getDouble(5),result_set.getString(6)));
+
             }
             product_table.setItems(product_data);
             result_set.close();
