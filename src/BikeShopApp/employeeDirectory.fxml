@@ -70,6 +70,11 @@
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </JFXButton>
+                  <JFXButton fx:id="delBtn" layoutX="520.0" layoutY="20.0" onAction="#EmpDelete" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Delete">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
                   <JFXButton fx:id="clearBtn" onAction="#clearFilters" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: black;" text="Clear Filters">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
@@ -107,17 +112,12 @@
                         </TableView>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <HBox prefHeight="90.0" prefWidth="523.0">
+                  <HBox prefHeight="100.0" prefWidth="688.0">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
                   </HBox>
                   <JFXButton fx:id="vieweditBtn" onAction="#vieweditclick" prefHeight="46.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 0.5;" text="View/Edit">
-                     <HBox.margin>
-                        <Insets right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </JFXButton>
-                  <JFXButton fx:id="delBtn" onAction="#EmpDelete" prefHeight="45.0" prefWidth="139.0" style="-fx-border-color: black;" text="Delete">
                      <HBox.margin>
                         <Insets right="10.0" top="10.0" />
                      </HBox.margin>

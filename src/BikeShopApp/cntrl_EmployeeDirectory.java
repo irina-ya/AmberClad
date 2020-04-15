@@ -142,7 +142,7 @@ public class cntrl_EmployeeDirectory implements Initializable {
             fetch_RowID();
             Connection conn = this.connect_db();
             try {
-                String sql = "DELETE FROM Customer WHERE customerID = " + employee_selected_id;
+                String sql = "DELETE FROM Employee WHERE employeeID = " + employee_selected_id;
                 PreparedStatement sql_statement = conn.prepareStatement(sql);
                 sql_statement.executeUpdate();
                 conn.commit();

@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="repair Order Lookup Screen">
-         <HBox.margin>
-            <Insets left="100.0" top="200.0" />
-         </HBox.margin>
-         <font>
-            <Font name="System Bold" size="43.0" />
-         </font>
-      </Label>
+      <VBox prefHeight="782.0" prefWidth="783.0">
+         <children>
+            <Label text="Repair Order Lookup">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="95.0" text="By Customer: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="45.0" prefWidth="768.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="63.0" text="First Name: ">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="custFirstName">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Label prefHeight="28.0" prefWidth="63.0" text="Last Name: ">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="custLastName">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="768.0">
+               <children>
+                  <Label text="By Type: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox prefHeight="25.0" prefWidth="199.0" promptText="Repair Type" />
+                  <Label prefHeight="29.0" prefWidth="81.0" text="By Status: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox prefHeight="25.0" prefWidth="164.0" promptText="Repair Status" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="53.0" text="By Bike: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView prefHeight="419.0" prefWidth="768.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Order ID" />
+                <TableColumn prefWidth="116.0" text="Repair Type" />
+                  <TableColumn prefWidth="139.0" text="Customer First Name" />
+                  <TableColumn minWidth="0.0" prefWidth="198.0" text="Customer Last Name" />
+                  <TableColumn minWidth="0.0" prefWidth="106.0" text="Bike" />
+                  <TableColumn prefWidth="133.0" text="Order Status" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
    </children>
 </HBox>
