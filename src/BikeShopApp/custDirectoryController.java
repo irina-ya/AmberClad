@@ -112,7 +112,7 @@ SQLServerDataSource ds = new SQLServerDataSource();
 
         Connection conn = this.connect_db();
         String sql_main = "SELECT customerID, customerFirstName, customerLastName, customerPrimaryPhone, customerEmail FROM Customer WHERE" + fname + lname + phone + email + " ORDER BY CustomerID";
-        System.out.println(sql_main);
+
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql_main);
             ResultSet result_set = preparedStatement.executeQuery();

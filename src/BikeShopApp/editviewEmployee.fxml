@@ -15,11 +15,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="782.0" prefWidth="777.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.cntrl_newEmployee">
+<GridPane alignment="center" hgap="10" prefHeight="782.0" prefWidth="777.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeShopApp.cntrl_editviewEmployee">
     <AnchorPane prefHeight="782.0" prefWidth="728.0" />
     <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
         <HBox>
-            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="New Employee " textOverrun="CENTER_ELLIPSIS">
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="289.0" text="Edit/View Employee " textOverrun="CENTER_ELLIPSIS">
                 <font>
                     <Font name="System Bold" size="27.0" />
                 </font>
@@ -136,7 +136,7 @@
             <Insets bottom="10.0" left="90.0" right="10.0" top="10.0" />
          </padding>
          <children>
-               <JFXButton fx:id="submit_btn" mnemonicParsing="false" onAction="#add_new_employee" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Submit" />
+               <JFXButton fx:id="submit_btn" mnemonicParsing="false" onAction="#save_emp_changes" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Submit" />
             <JFXButton fx:id="btn_close" layoutX="100.0" layoutY="20.0" mnemonicParsing="false" onAction="#setBtn_close" prefHeight="25.0" prefWidth="100.0" ripplerFill="BLACK" style="-fx-border-color: #000000;" text="Close">
                <HBox.margin>
                   <Insets left="100.0" />
