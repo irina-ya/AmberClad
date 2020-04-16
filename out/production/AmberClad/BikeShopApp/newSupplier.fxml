@@ -17,7 +17,7 @@
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="TOP_RIGHT" prefHeight="782.0" prefWidth="768.0">
         <HBox prefHeight="50.0">
-            <Label prefHeight="64.0" prefWidth="378.0" text="New Part Supplier" textOverrun="CENTER_ELLIPSIS">
+            <Label prefHeight="64.0" prefWidth="378.0" text="New Supplier" textOverrun="CENTER_ELLIPSIS">
                 <font>
                     <Font name="System Bold" size="43.0" />
                 </font>
@@ -147,7 +147,7 @@
                </HBox.margin>
                </JFXComboBox>
             <HBox prefHeight="51.0" prefWidth="251.0" />
-               <JFXButton mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #000000;" text="Submit">
+               <JFXButton mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-border-color: #000000;" text="Submit">
                <HBox.margin>
                   <Insets right="20.0" top="20.0" />
                </HBox.margin>

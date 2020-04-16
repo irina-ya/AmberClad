@@ -13,37 +13,32 @@
               <children>
                   <VBox layoutX="18.0" layoutY="56.0" prefHeight="726.0" prefWidth="238.0">
                       <children>
-                  <JFXButton alignment="TOP_LEFT" onMouseClicked="#home" prefHeight="48.0" prefWidth="238.0" text="Home" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </JFXButton>
-                          <JFXButton fx:id="repairOrderMain" alignment="BOTTOM_LEFT" onMouseClicked="#repairOrderMain" prefHeight="44.0" prefWidth="238.0" text="Repair Orders" textFill="#e8f1f7">
+                          <JFXButton fx:id="repairOrderMain" alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="238.0" text="Repair Orders" textFill="#e8f1f7">
                               <font>
                                   <Font name="System Bold" size="20.0" />
                               </font>
                           </JFXButton>
-                          <HBox prefHeight="117.0" prefWidth="238.0">
+                          <HBox prefHeight="116.0" prefWidth="238.0">
                               <children>
                                   <VBox prefHeight="100.0" prefWidth="45.0" />
                                   <VBox prefHeight="100.0" prefWidth="193.0">
                                       <children>
-                                          <JFXButton fx:id="roLookup" alignment="TOP_LEFT" onMouseClicked="#repairOrderLookup" prefHeight="28.0" prefWidth="194.0" text="Repair Order Lookup" textFill="#fafafa">
-                                              <font>
-                                                  <Font size="13.0" />
-                                              </font>
-                                          </JFXButton>
                                           <JFXButton fx:id="newRepair" alignment="TOP_LEFT" onMouseClicked="#newRepairOrder" prefHeight="28.0" prefWidth="194.0" text="New Repair Order" textFill="#fafafa">
                                               <font>
                                                   <Font size="13.0" />
                                               </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="activeRepair" alignment="TOP_LEFT" onMouseClicked="#activeRepairOrder" prefHeight="28.0" prefWidth="194.0" text="Active Repair Orders" textFill="#fafafa">
+                                          <JFXButton fx:id="roLookup" alignment="TOP_LEFT" onMouseClicked="#repairOrderLookup" prefHeight="28.0" prefWidth="194.0" text="Repair Order Lookup" textFill="#fafafa">
                                               <font>
                                                   <Font size="13.0" />
                                               </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="allRepair" alignment="TOP_LEFT" onMouseClicked="#allRepairOrder" prefHeight="28.0" prefWidth="194.0" text="All Repair Orders" textFill="#fafafa">
+                                          <JFXButton fx:id="addService" alignment="TOP_LEFT" onMouseClicked="#addRepairService" prefHeight="28.0" prefWidth="194.0" text="Add Service to Repair Order" textFill="#fafafa">
+                                              <font>
+                                                  <Font size="13.0" />
+                                              </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="assignEmployee" alignment="TOP_LEFT" onMouseClicked="#assignRepairOrder" prefHeight="28.0" prefWidth="194.0" text="Assign Employee to Repair " textFill="#fafafa">
                                               <font>
                                                   <Font size="13.0" />
                                               </font>
@@ -52,34 +47,59 @@
                                   </VBox>
                               </children>
                           </HBox>
-                          <JFXButton fx:id="productOrderMain" alignment="BOTTOM_LEFT" onMouseClicked="#productOrdersMain" prefHeight="43.0" prefWidth="258.0" text="Product Orders" textFill="#e8f1f7">
+                  <JFXButton fx:id="repairOrderMain1" alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="238.0" text="Parts for Repair Order" textFill="#e8f1f7">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                        <VBox prefHeight="36.0" prefWidth="239.0">
+                           <children>
+                              <JFXButton fx:id="newRepairPart" alignment="TOP_LEFT" onMouseClicked="#newRepairPart" prefHeight="28.0" prefWidth="194.0" text="New Repair Part" textFill="#fafafa">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="partLookup" alignment="TOP_LEFT" onMouseClicked="#repairPartDirectory" prefHeight="28.0" prefWidth="194.0" text="Repair Part Directory" textFill="#fafafa">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="addSupplier" alignment="TOP_LEFT" onMouseClicked="#newSupplier" prefHeight="28.0" prefWidth="194.0" text="Add Part Supplier" textFill="#fafafa">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="supplierDirectory" alignment="TOP_LEFT" onMouseClicked="#supplierDirectory" prefHeight="28.0" prefWidth="194.0" text="Supplier Directory" textFill="#fafafa">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="238.0" />
+                          <JFXButton fx:id="productOrderMain" alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="258.0" text="Product Orders" textFill="#e8f1f7">
                               <font>
                                   <Font name="System Bold" size="20.0" />
                               </font>
                           </JFXButton>
-                          <VBox prefHeight="100.0" prefWidth="45.0">
+                          <VBox prefHeight="60.0" prefWidth="238.0">
                               <children>
-                                  <HBox prefHeight="117.0" prefWidth="238.0">
+                                  <HBox prefHeight="59.0" prefWidth="238.0">
                                       <children>
                                           <VBox prefHeight="100.0" prefWidth="45.0" />
-                                          <VBox prefHeight="100.0" prefWidth="193.0">
+                                          <VBox prefHeight="74.0" prefWidth="193.0">
                                               <children>
-                                                  <JFXButton fx:id="poLookup" alignment="TOP_LEFT" onMouseClicked="#productOrderLookup" prefHeight="28.0" prefWidth="194.0" text="Product Order Lookup" textFill="#fafafa">
-                                                      <font>
-                                                          <Font size="13.0" />
-                                                      </font>
-                                                  </JFXButton>
                                                   <JFXButton fx:id="newProduct" alignment="TOP_LEFT" onMouseClicked="#newProductOrder" prefHeight="28.0" prefWidth="194.0" text="New Product Order" textFill="#fafafa">
                                                       <font>
                                                           <Font size="13.0" />
                                                       </font>
                                                   </JFXButton>
-                                                  <JFXButton fx:id="activeProduct" alignment="TOP_LEFT" onMouseClicked="#activeProductOrders" prefHeight="28.0" prefWidth="194.0" text="Unfullfilled Orders" textFill="#fafafa">
-                                                      <font>
-                                                          <Font size="13.0" />
-                                                      </font>
-                                                  </JFXButton>
-                                                  <JFXButton fx:id="allProduct" alignment="TOP_LEFT" onMouseClicked="#allProductOrders" prefHeight="28.0" prefWidth="194.0" text="All Product Orders" textFill="#fafafa">
+                                                  <JFXButton fx:id="allProduct" alignment="TOP_LEFT" onMouseClicked="#allProductOrders" prefHeight="28.0" prefWidth="194.0" text="Product Order Lookup" textFill="#fafafa">
                                                       <font>
                                                           <Font size="13.0" />
                                                       </font>
@@ -90,7 +110,7 @@
                                   </HBox>
                               </children>
                           </VBox>
-                          <JFXButton fx:id="customerMain" alignment="BOTTOM_LEFT" onMouseClicked="#customerMain" prefHeight="43.0" prefWidth="258.0" text="Customer" textFill="#e8f1f7">
+                          <JFXButton alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="238.0" text="Customer" textFill="#e8f1f7">
                               <font>
                                   <Font name="System Bold" size="20.0" />
                               </font>
@@ -114,7 +134,7 @@
                                   </VBox>
                               </children>
                           </HBox>
-                          <JFXButton fx:id="employeeMain" alignment="BOTTOM_LEFT" onMouseClicked="#employeeMain" prefHeight="43.0" prefWidth="258.0" text="Employee" textFill="#e8f1f7">
+                          <JFXButton fx:id="employeeMain" alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="258.0" text="Employee" textFill="#e8f1f7">
                               <font>
                                   <Font name="System Bold" size="20.0" />
                               </font>
@@ -138,36 +158,19 @@
                                   </VBox>
                               </children>
                           </HBox>
-                          <JFXButton fx:id="reportingMain" alignment="BOTTOM_LEFT" onMouseClicked="#reportingMain" prefHeight="43.0" prefWidth="258.0" text="Reporting" textFill="#e8f1f7">
-                              <font>
-                                  <Font name="System Bold" size="20.0" />
-                              </font>
-                          </JFXButton>
                           <HBox prefHeight="70.0" prefWidth="238.0">
                               <children>
                                   <VBox prefHeight="100.0" prefWidth="45.0" />
-                                  <VBox prefHeight="98.0" prefWidth="194.0">
-                                      <children>
-                                          <JFXButton fx:id="customReport" alignment="TOP_LEFT" onMouseClicked="#customReport" prefHeight="28.0" prefWidth="194.0" text="Custom Report" textFill="#fafafa">
-                                              <font>
-                                                  <Font size="13.0" />
-                                              </font>
-                                          </JFXButton>
-                                          <JFXButton fx:id="myReport" alignment="TOP_LEFT" onMouseClicked="#myReports" prefHeight="28.0" prefWidth="194.0" text="My Reports" textFill="#fafafa">
-                                              <font>
-                                                  <Font size="13.0" />
-                                              </font>
-                                          </JFXButton>
-                                      </children>
-                                  </VBox>
+                                  <VBox prefHeight="98.0" prefWidth="194.0" />
                               </children>
                           </HBox>
+                  <VBox prefHeight="100.0" prefWidth="45.0" />
                       </children>
                   </VBox>
               </children>
           </AnchorPane>
    </left>
    <center>
-          <AnchorPane id="view" fx:id="main" prefHeight="782.0" prefWidth="768.0" BorderPane.alignment="CENTER" />
+          <AnchorPane id="view" fx:id="main" onMouseClicked="#assignRepairOrder" prefHeight="782.0" prefWidth="768.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

@@ -28,15 +28,17 @@ public class SidebarController implements Initializable {
 
     //These methods load fxml files to anchor pane 'On Mouse Clicked'. Add these methods to button in SceneBuilder.
     //call load page method and add title of fxml w/o fxml extension
-    @FXML
+/*    @FXML
     private void home(MouseEvent event){
         bp.setCenter(main);
-    }
+    }*/
+
+    //Repair Order
 
     @FXML
-    private void repairOrderMain(MouseEvent event){
-        System.out.println("I load Repair Order Screen!");
-        loadPage("repairOrderMain");
+    private void newRepairOrder(MouseEvent event){
+        System.out.println("I load new Repair Order Screen!");
+        loadPage("newRepairOrder");
     }
 
     @FXML
@@ -46,34 +48,44 @@ public class SidebarController implements Initializable {
     }
 
     @FXML
-    private void newRepairOrder(MouseEvent event){
+    private void addRepairService(MouseEvent event){
         System.out.println("I load new Repair Order Screen!");
-        loadPage("newRepairOrder");
+        loadPage("addRepairService");
     }
 
     @FXML
-    private void activeRepairOrder(MouseEvent event){
-        System.out.println("I load Active Order Screen!");
-        loadPage("activeRepairOrders");
+    private void assignRepairOrder(MouseEvent event){
+        System.out.println("I load assign employee screen!");
+        loadPage("assignRepairOrder");
+    }
+
+    //Parts for Repair Order
+
+    @FXML
+    private void newRepairPart(MouseEvent event){
+        System.out.println("I load new Repair Part!");
+        loadPage("newRepairPart");
     }
 
     @FXML
-    private void allRepairOrder(MouseEvent event){
-        System.out.println("I load All Order Screen!");
-        loadPage("allRepairOrders");
+    private void repairPartDirectory(MouseEvent event){
+        System.out.println("I load Repair Part Directory!");
+        loadPage("RepairPartDirectory");
     }
 
     @FXML
-    private void productOrdersMain(MouseEvent event){
-        System.out.println("I load  Product Order Screen!");
-        loadPage("productOrdersMain");
+    private void newSupplier(MouseEvent event){
+        System.out.println("I load new Supplier!");
+        loadPage("newSupplier");
     }
 
     @FXML
-    private void productOrderLookup(MouseEvent event){
-        System.out.println("I load Product Order Lookup Screen!");
-        loadPage("productOrderLookup");
+    private void supplierDirectory(MouseEvent event){
+        System.out.println("I load Supplier Directory!");
+        loadPage("supplierDirectory");
     }
+
+    //Product Orders
 
     @FXML
     private void newProductOrder(MouseEvent event){
@@ -81,11 +93,6 @@ public class SidebarController implements Initializable {
         loadPage("newProductOrder");
     }
 
-    @FXML
-    private void activeProductOrders(MouseEvent event){
-        System.out.println("I load Active Product Order Screen!");
-        loadPage("activeProductOrders");
-    }
 
     @FXML
     private void allProductOrders(MouseEvent event){
@@ -93,12 +100,7 @@ public class SidebarController implements Initializable {
         loadPage("ProductDirectory");
     }
 
-    @FXML
-    private void customerMain(MouseEvent event){
-        System.out.println("I load Customer Main Screen!");
-        loadPage("customersMain");
-    }
-
+    //Customer
     @FXML
     private void newCustomer(MouseEvent event){
         System.out.println("I load new Customer Screen!");
@@ -112,11 +114,7 @@ public class SidebarController implements Initializable {
         loadPage("CustomerDirectory");
     }
 
-    @FXML
-    private void employeeMain(MouseEvent event){
-        System.out.println("I load employee Main");
-        loadPage("employeeMain");
-    }
+    //Employee
 
     @FXML
     private void newEmployee(MouseEvent event){
@@ -130,23 +128,6 @@ public class SidebarController implements Initializable {
         loadPage("employeeDirectory");
     }
 
-    @FXML
-    private void reportingMain(MouseEvent event){
-        System.out.println("I load Reporting Main Screen!");
-        loadPage("reportingMain");
-    }
-
-    @FXML
-    private void customReport(MouseEvent event){
-        System.out.println("I load Custom Reports screen!");
-        loadPage("customReport");
-    }
-
-    @FXML
-    private void myReports(MouseEvent event){
-        System.out.println("I load My Reports Screen!");
-        loadPage("myReports");
-    }
 
     //Loads fxml files in anchorpane. DO NOT CHANGE
     private void loadPage(String page){
